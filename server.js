@@ -12,6 +12,7 @@ var io = require('socket.io')(http);
 http.listen(3000);
 
 app.set("view engine", "jade");
+//静的ファイルを読み込み可能にする
 app.use(express.static(path.join(__dirname, 'static')));
 
 app.get('/', function(req, res, next){
